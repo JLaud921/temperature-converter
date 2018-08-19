@@ -19,7 +19,7 @@ function FahrenheittoCelciusandKelvin() {
     const CTemp = (FTemp - 32) * (5/9);
     const KTemp = (FTemp + 459.67) * 5/9;
     Celciusinput.value= roundNum(CTemp);
-    Kelvininput.value= round(KTemp);
+    Kelvininput.value= roundNum(KTemp);
 }
   
 function KelvinttoCelciusandFahrenheit(){
