@@ -29,6 +29,11 @@ function KelvinttoCelciusandFahrenheit(){
     Celciusinput.value = roundNum(CTemp);
     Fahrenheitinput.value = roundNum(FTemp);
 }
+
+function main() {
 Celciusinput.addEventListener('input', CelciustoFahrenheitandKelvin );
 Fahrenheitinput.addEventListener('input', FahrenheittoCelciusandKelvin);
 Kelvininput.addEventListener('input', KelvinttoCelciusandFahrenheit);
+}
+
+main();
