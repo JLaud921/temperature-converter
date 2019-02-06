@@ -1,12 +1,12 @@
-const Celciusinput = document.querySelector('#Celcius > input');
-const Fahrenheitinput = document.querySelector('#Fahrenheit > input');
-const Kelvininput = document.querySelector('#Kelvin > input');
+const celciusInput = document.querySelector('#Celcius > input');
+const fahrenheitInput = document.querySelector('#Fahrenheit > input');
+const kelvinInput = document.querySelector('#Kelvin > input');
 
 function roundNum(num){
 return Math.round(num * 100) / 100;
 }
 
-function CelciustoFahrenheitandKelvin() {
+function celciusToFahrenheitandKelvin() {
     const CTemp = parseFloat(Celciusinput.value);
     const FTemp = (CTemp * (9 / 5)) + 32;
     const KTemp = CTemp + 273.15;
@@ -14,7 +14,7 @@ function CelciustoFahrenheitandKelvin() {
     Kelvininput.value = roundNum(KTemp);
 }
 
-function FahrenheittoCelciusandKelvin() {
+function fahrenhetToCelciusAndKelvin() {
     const FTemp = parseFloat(Fahrenheitinput.value);
     const CTemp = (FTemp - 32) * (5/9);
     const KTemp = (FTemp + 459.67) * 5/9;
@@ -22,18 +22,18 @@ function FahrenheittoCelciusandKelvin() {
     Kelvininput.value= roundNum(KTemp);
 }
   
-function KelvinttoCelciusandFahrenheit(){
-    const KTemp= parseFloat(Kelvininput.value);
+function kelvinToCelciusAndFahrenheit(){
+    const KTemp= parseFloat(kelvinInput.value);
     const CTemp= KTemp - 273.15;
     const FTemp= 9/5 *(KTemp -273) +32;
-    Celciusinput.value = roundNum(CTemp);
-    Fahrenheitinput.value = roundNum(FTemp);
+    celciusInput.value = roundNum(CTemp);
+    fahrenheitInput.value = roundNum(FTemp);
 }
 
 function main() {
-Celciusinput.addEventListener('input', CelciustoFahrenheitandKelvin );
-Fahrenheitinput.addEventListener('input', FahrenheittoCelciusandKelvin);
-Kelvininput.addEventListener('input', KelvinttoCelciusandFahrenheit);
+celciusInput.addEventListener('input', celciusToFahrenheitAndKelvin );
+fahrenheitInput.addEventListener('input', fahrenheitToCelciusAndKelvin);
+kelvinInput.addEventListener('input', KelvinToCelciusAndFahrenheit);
 }
 
 main();
